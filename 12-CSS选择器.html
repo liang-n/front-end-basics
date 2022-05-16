@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>12-CSS选择器</title>
+</head>
+
+<body>
+    <p>
+    <h1>12-CSS选择器</h1>
+
+    <h2>元素的 id 和 class</h2>
+
+    <p>id和class是元素最基本的两个属性。一般情况下，id和class都是用来选择元素，以便进行CSS操作或者JavaScript操作的。</p>
+    <p>对于id和class，我们可以这样理解：id就像你的身份证号，而class就像你的名字。身份证号是唯一的，但是两个人的名字却有可能是一样的。</p>
+
+    <h3>id 属性</h3>
+
+    <P>id属性具有唯一性，也就是说，在一个页面中相同的id只能出现一次。</P>
+
+    <H3>class 属性</H3>
+
+    <p>class，顾名思义，就是“类”，我们可以为同一个页面的相同元素或者不同元素设置相同的class，然后使相同class的元素具有相同的CSS样式。</p>
+
+    <h2>CSS选择器</h2>
+
+    <p>选择器，就是指用一种方式把你想要的那个元素选中。</p>
+    <p>在CSS中，有很多方式可以把你想要的元素选中，这些不同的方式其实就是不同的选择器，但是它们的最终目的是相同的，就是把你想要的元素选中，这样才可以定义该元素CSS样式。</p>
+    <p>选择器有很多，这里介绍 7 种基础选择器：</p>
+    <ol>
+        <li>通用选择器</li>
+        <li>属性选择器</li>
+        <li>元素选择器</li>
+        <li>id选择器</li>
+        <li>class选择器</li>
+        <li>后代选择器</li>
+        <li>群组选择器</li>
+    </ol>
+
+    <h3>通用选择器</h3>
+
+    <p>使用符号 * 选中页面内所有元素。</p>
+
+    <h3>属性选择器</h3>
+
+    <p>使用半角方括号 [arr] 内部填写属性名的方式，选中所有包含此属性的元素。</p>
+    <style>
+        [title]{
+            color: crimson;
+        }
+    </style>
+    <div title="test">Liang's Blog</div>
+
+    <h3>元素选择器</h3>
+
+    <p>元素选择器，就是选中相同的元素，然后对相同的元素定义同一个CSS样式。</p>
+    <p>div { } 表示选中页面上所有 div 标签，内部 color 属性表示设置颜色，多个属性使用半角分号 ; 分隔。</p>
+    <style>
+        div {
+            color: aqua;
+        }
+    </style>
+    <div>Liang's Blog</div>
+    <div>Liang's Blog</div>
+
+    <h3>id 选择器</h3>
+
+    <p>为元素设置一个id属性，然后针对设置了这个id的元素定义CSS样式，这就是id选择器，但要注意，在同一个页面中，是不允许出现两个相同的id的。</p>
+    <p>这个与“没有两个人的身份证号相同”是一样的道理</p>
+    <p>id 选择器以 # 开头，后面跟元素的 id 属性值，其他地方与元素选择器一样。</p>
+    <style>
+        #id-option {
+            color: aquamarine;
+        }
+    </style>
+    <div id="id-option">Liang's Blog</div>
+    <div>Liang's Blog</div>
+
+    <h3>class 选择器</h3>
+
+    <p>class 选择器，也就是“类选择器”。我们可以对“相同的元素”或者“不同的元素”定义相同的class属性，然后针对拥有同一个class的元素进行CSS样式操作。</p>
+    <p>class 选择器以半角逗号 . 开头，后面跟元素的 class 属性值，其他地方与元素选择器一样。</p>
+    <style>
+        .group {
+            color: coral;
+        }
+    </style>
+    <div class="group">Liang's Blog</div>
+    <span class="group">Liang's Blog</span>
+
+    <h3>后代组合器</h3>
+
+    <p>当一个元素被另一个元素包裹时，如果需要准确的选中内部的子元素，需要使用后代选择器逐级选择。</p>
+    <p>父元素选择器与子元素选择器之间用空格分隔。</p>
+    <style>
+        #father1 div {
+            color: blueviolet;
+        }
+
+        #father2 div {
+            color: fuchsia;
+        }
+    </style>
+    <div id="father1">
+        <div>Liang's Blog</div>
+        <div>Liang's Blog</div>
+    </div>
+    <div id="father2">
+        <div>Liang's Blog</div>
+        <div>Liang's Blog</div>
+    </div>
+
+    <h3>群组选择器</h3>
+
+    <p>使用半角逗号 , 将多个选择器组合，表示同时选中所有符合选择器条件的元素。</p>
+    <style>
+        #select1,
+        #select2 {
+            color: #595bed;
+        }
+    </style>
+    <div id="select1">Liang's Blog</div>
+    <span id="select2">Liang's Blog</span>
+</body>
+
+</html>
