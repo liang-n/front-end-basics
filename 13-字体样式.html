@@ -49,6 +49,111 @@
     <div id="family1">Liang's Blog</div>
     <div id="family2">Liang's Blog</div>
     <div id="family3">Liang's Blog</div>
+
+    <h3>字体大小</h3>
+
+    <p>在CSS中，我们可以使用font-size属性来定义字体大小。</p>
+    <p>font-size属性取值有两种：</p>
+    <p>一种是“关键字”，如small、medium、large等，实际开发中基本不会用到。</p>
+    <p>另外一种是“数值”，如10px、16px、21px等。</p>
+    <p></p>
+    <style>
+        #font-size {
+            font-size: 10px;
+        }
+    </style>
+    <div id="font-size">Liang‘s Blog</div>
+    <div>Liang‘s Blog</div>
+
+    <h3>字体粗细</h3>
+
+    <p>在CSS中，使用font-weight属性来定义字体粗细。</p>
+    <p>font-weight属性取值有两种：</p>
+    <p>一种是“数值”：100~900</p>
+    <p>一种是“关键字”：</p>
+    <ul>
+        <li>normal - 正常（默认值），与 400 等值</li>
+        <li>bold - 加粗，与 700 等值</li>
+        <li>lighter - 比从父级继承来的值更细，不低与 1</li>
+        <li>bolder - 比从父级继承来的值更粗，不高与 1000</li>
+    </ul>
+    <style>
+        #normal {
+            font-weight: normal;
+        }
+
+        #bold {
+            font-weight: bold;
+        }
+
+        #lighter {
+            font-weight: lighter;
+        }
+
+        #bolder {
+            font-weight: bolder;
+        }
+    </style>
+    <div id="normal">字体粗细：normal</div>
+    <div id="bold">字体粗细：bold</div>
+    <div id="lighter">字体粗细：lighter</div>
+    <div id="bolder">字体粗细：bolder</div>
+
+    <h3>字体风格</h3>
+
+    <p>在CSS中，我们可以使用font-style属性来定义斜体效果。</p>
+    <p>font-style属性取值：</p>
+    <ul>
+        <li>normal - 正常（默认值）</li>
+        <li>italic - 斜体</li>
+        <li>oblique - 倾斜体</li>
+    </ul>
+    <p>italic 和 oblique 是字体的两种倾斜版本，不同的字体使用的属性可能会不同。</p>
+    <style>
+        #italic {
+            font-style: italic;
+        }
+
+        #oblique {
+            font-style: oblique;
+        }
+    </style>
+    <div>Liang‘s Blog</div>
+    <div id="italic">Liang's Blog</div>
+    <div id="oblique">Liang's Blog</div>
+
+    <h3>字体颜色</h3>
+
+    <p>在CSS中，我们可以使用color属性来定义字体颜色。</p>
+    <p>color属性取值有两种：</p>
+    <p>一种是“关键字”，指的就是颜色的英文名称，如red、blue、green等。</p>
+    <p>另一种是“色值”，如 #ffffff 或 rgb(124,124,124)。</p>
+    <style>
+        #red {
+            color: red;
+        }
+
+        #hex {
+            color: #ffd500;
+            ;
+        }
+
+        #rgb {
+            color: rgb(0, 115, 255);
+        }
+    </style>
+    <div id="red">Liang's Blog</div>
+    <div id="hex">Liang's Blog</div>
+    <div id="rgb">Liang's Blog</div>
+
+    <h3>CSS 注释</h3>
+
+    <p>为了提高代码的可读性和可维护性，我们需要对CSS中的关键代码做一下注释。</p>
+    <P>语法：/*注释内容*/</P>
+    <style>
+        /*这是一条CSS注释*/
+    </style>
+
 </body>
 
 </html>
