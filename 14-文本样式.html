@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>14-文本样式</title>
+</head>
+
+<body>
+
+    <h1>14-文本样式</h1>
+
+    <p>字体样式针对的是“文字本身”的形体效果，而文本样式针对的是“整个段落”的排版效果，因此在CSS中，特意使用了“font”和“text”两个前缀来区分这两类样式。</p>
+    <p>在CSS中，常见的文本样式如下：</p>
+    <ul>
+        <li>text-indent - 首行缩进</li>
+        <li>text-align - 水平对齐</li>
+        <li>text-decoration - 文本修饰</li>
+        <li>text-transform - 大小写转换</li>
+        <li>line-height - 行高</li>
+        <li>letter-spacing/word-spacing - 文字间距/单词间距</li>
+    </ul>
+
+    <h2>text-indent 首行缩进</h2>
+
+    <p>中文段落首行一般需要缩进两个字的空间，想要实现这个效果，那么textindent值应该是font-size值的2倍。</p>
+    <style>
+        #indent {
+            font-size: 12px;
+            text-indent: 24px;
+        }
+    </style>
+    <p id="indent">水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</p>
+    <p id="indent">予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻；莲之爱，同予者何人？牡丹之爱，宜乎众矣。</p>
+
+    <h2>text-align 水平对齐</h2>
+
+    <p>text-align属性取值有 3 个：</p>
+    <ul>
+        <li>left - 左对齐（默认）</li>
+        <li>center - 居中</li>
+        <li>right - 右对齐</li>
+    </ul>
+    <style>
+        #left {
+            text-align: left;
+        }
+
+        #center {
+            text-align: center;
+        }
+
+        #right {
+            text-align: right;
+        }
+    </style>
+    <p id="left">Liang's Blog（左对齐）</p>
+    <p id="center">Liang's Blog（居中）</p>
+    <p id="right">Liang's Blog（右对齐）</p>
+
+    <h2>text-decoration 文本修饰</h2>
+
+    <p>使用 text-decoration 属性来定义文本的修饰效果：</p>
+    <ul>
+        <li>none - 去除所有所有划线效果（默认）</li>
+        <li>overline - 上划线</li>
+        <li>line-through - 中划线（删除线）</li>
+        <li>underline - 下划线</li>
+    </ul>
+    <style>
+        #overline {
+            text-decoration: overline;
+        }
+
+        #line-through {
+            text-decoration: line-through;
+        }
+
+        #underline {
+            text-decoration: underline;
+        }
+
+        #none {
+            text-decoration: none;
+        }
+    </style>
+    <p id="overline">Liang's Blog</p>
+    <p id="line-through">Liang's Blog</p>
+    <p id="underline">Liang's Blog</p>
+    <a id="none" href="https://liang-n.github.io">Liang's Blog（去除链接下划线）</a>
+
+    <h2>text-transform 大小写转换</h2>
+
+    <p>text-transform属性是针对英文而言的，因为中文不存在大小写之分。</p>
+    <p>text-transform属性取值有4个：</p>
+    <ul>
+        <li>none - 无转换（默认）</li>
+        <li>uppercase - 转换为大写</li>
+        <li>lowercase - 转换为小写</li>
+        <li>capitalize - 首字母大写</li>
+    </ul>
+    <style>
+        #uppercase {
+            text-transform: uppercase;
+        }
+
+        #lowercase {
+            text-transform: lowercase;
+        }
+
+        #capitalize {
+            text-transform: capitalize;
+        }
+    </style>
+    <p id="uppercase">liang’s blog</p>
+    <p id="lowercase">LIANG’S BLOG</p>
+    <p id="capitalize">liang’s blog</p>
+
+    <h2>line-height 行高</h2>
+
+    <p>行高，顾名思义就是“一行的高度”，注意不是段落间距。</p>
+    <style>
+        #p1 {
+            line-height: 15px;
+        }
+
+        #p2 {
+            line-height: 20px;
+        }
+
+        #p3 {
+            line-height: 25px;
+        }
+    </style>
+    <p id="p1">水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</p>
+    <p id="p2">水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</p>
+    <p id="p3">水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</p>
+
+    <h2>letter/word-spacing 字符／单词间距</h2>
+
+    <p>letter-spacing，从英文意思上就可以知道这是“字母间距”。注意，每一个中文汉字都被当作一个“字”，而每一个英文字母也被当作一个“字”。</p>
+    <p>word-spacing，从英文意思上就可以知道这是“单词间距”。一般来说，word-spacing只针对英文单词而言。</p>
+
+    <style>
+        #letter1 {
+            letter-spacing: 0px;
+        }
+
+        #letter2 {
+            letter-spacing: 3px;
+        }
+
+        #letter3 {
+            letter-spacing: 6px;
+        }
+
+        #word1 {
+            word-spacing: 0px;
+        }
+
+        #word2 {
+            word-spacing: 3px;
+        }
+
+        #word3 {
+            word-spacing: 6px;
+        }
+    </style>
+    <p><strong>字符间距</strong></p>
+    <p id="letter1">Rome was't built in a day. 罗马不是一天建成的。</p>
+    <p id="letter2">Rome was't built in a day. 罗马不是一天建成的。</p>
+    <p id="letter3">Rome was't built in a day. 罗马不是一天建成的。</p>
+    <p><strong>单词间距</strong></p>
+    <p id="word1">Rome was't built in a day. 罗马不是一天建成的。</p>
+    <p id="word2">Rome was't built in a day. 罗马不是一天建成的。</p>
+    <p id="word3">Rome was't built in a day. 罗马不是一天建成的。</p>
+
+    <h2>本章练习</h2>
+
+    <style>
+        #div-indent {
+            font-size: 12px;
+            text-indent: 24px;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+
+        #p-uppercase {
+            text-transform: uppercase;
+        }
+    </style>
+
+    <div id="div-indent">
+        <p>很多人都喜欢用战术上的勤奋来掩盖战略上的懒惰，事实上这种 “<span>低水平的勤奋</span>” 远远比懒惰可怕。</p>
+        <p id="p-uppercase">Remember：no pain，no gain！</p>
+    </div>
+    
+</body>
+
+</html>
