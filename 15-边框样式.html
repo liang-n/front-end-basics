@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>15-边框样式</title>
+</head>
+
+<body>
+    <h1>15-边框样式</h1>
+
+    <p>在网页中几乎所有的元素都可以定义边框。例如，div元素可以定义边框，img元素可以定义边框，table元素可以定义边框，span元素同样也可以定义边框。</p>
+
+    <p>想要为一个元素定义边框样式，必须要同时设置这3个属性才会有效果：</p>
+
+    <ul>
+        <li>border-width - 宽度</li>
+        <li>border-style - 外观</li>
+        <li>border-color - 颜色</li>
+    </ul>
+
+    <h2>整体样式</h2>
+
+    <p>1. border-width 属性用于定义边框的宽度,取值是一个像素值。</p>
+
+    <p>2. border-style 属性用于定义边框的外观,常用取值如下：</p>
+
+    <ul>
+        <li>none - 无样式</li>
+        <li>dashed - 虚线</li>
+        <li>solid - 实线</li>
+    </ul>
+
+    <p>除此以外还有 hidden、dotted、double 等不常用的取值。</p>
+
+    <p>3. border-color - 属性用于定义边框的颜色，取值是「颜色关键字」或「十六进制RGB值」。</p>
+
+    <p>示例，为 div 加上边框：</p>
+
+    <div>
+        <style>
+            .div-group {
+                width: 150px;
+                height: 80px;
+                border-width: 1px;
+            }
+
+            #div1 {
+                border-style: solid;
+                border-color: gray;
+            }
+
+            #div2 {
+                border-style: dashed;
+                border-color: red;
+            }
+        </style>
+
+        <div id="div1" class="div-group"></div>
+        <br>
+        <div id="div2" class="div-group"></div>
+    </div>
+
+    <p>示例，为 img 加上边框：</p>
+
+    <div>
+        <style>
+            #img1 {
+                border-width: 2px;
+                border-style: solid;
+                border-color: red;
+                width: 200px;
+            }
+        </style>
+        <img id="img1" src="http://www.github.com/liang-n.png" alt="我的头像">
+    </div>
+
+    <p>其实想要为一个元素定义边框，并不需要完整的写出上面的三个属性，CSS 为我们提供了一种简写形式：</p>
+
+    <p><b>border: 1px solid red;</b></p>
+
+    等价于：
+
+    <p>
+        <b>
+            border-width: 1px;<br>
+            border-style: solid;<br>
+            border-color: red;
+        </b>
+    </p>
+
+    <h2>局部样式</h2>
+
+    <p>一个元素其实有4条边（上、下、左、右），如何对某一条边进行单独设置呢？</p>
+
+    <ul>
+        <li>border-top - 上边框</li>
+        <li>border-bottom - 下边框</li>
+        <li>border-left - 左边框</li>
+        <li>border-right - 右边框</li>
+    </ul>
+
+    <p>与整体样式相同，有完整形式和简写形式两种，它们之间是等价的。</p>
+
+    <p>以上边框为例，完整形式：</p>
+
+    <p>
+        <b>
+            border-top-width:1px;<br>
+            border-top-style:solid;<br>
+            border-top-color:red;
+        </b>
+    </p>
+
+    <p>简写形式：</p>
+
+    <p><b>border-top:1px solid red;</b></p>
+
+    <p>示例：</p>
+
+    <div>
+        <style>
+            #div3 {
+                width: 200px;
+                height: 80px;
+                border-top: 1px solid red;
+                border-left: 1px solid aqua;
+                border-right: 1px solid royalblue;
+            }
+        </style>
+        <div id="div3"></div>
+    </div>
+
+    <br>
+
+</body>
+
+</html>
