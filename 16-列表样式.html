@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>16-列表样式</title>
+</head>
+
+<body>
+    <h1>16-列表样式</h1>
+
+    <p>相关笔记：<a href="/05-列表.html">05-列表</a></p>
+
+    <hr>
+
+    <br>
+
+    <h2>16.1 列表项符号：list-style-type</h2>
+
+    <hr>
+
+    <p>在HTML中，有序列表和无序列表的列表项符号，都是使用type属性来定义，此属性针对 ol 或 ul 元素，而不是 li 元素。</p>
+
+    <p style="border:1px solid gray;padding:10px">语法：list-style-type:取值;</p>
+
+    <p>有序列表取值：</p>
+
+    <ul>
+        <li>decimal - 阿拉伯数字：1、2、3……（默认）</li>
+        <li>lower-roman - 小写罗马数字：i、ii、iii……</li>
+        <li>upper-roman - 大写罗马数字：I、II、III……</li>
+        <li>lower-alpha - 小写英文字母：a、b、c……</li>
+        <li>upper-alpha - 大写英文字母：A、B、C……</li>
+    </ul>
+
+    <p>无序列表取值：</p>
+
+    <ul>
+        <li>disc - 实心圆 ●</li>
+        <li>circle - 空心圆 ○</li>
+        <li>square - 正方形 ■</li>
+    </ul>
+
+    去除列表项符号：
+
+    <ul>
+        <li>
+            none
+        </li>
+    </ul>
+
+    <p>示例：</p>
+
+    <div style="border: 1px solid gray; padding:0 10px;">
+        <style>
+            #ol1 {
+                list-style-type: lower-roman;
+            }
+
+            #ul1 {
+                list-style-type: circle;
+            }
+
+            #none {
+                list-style-type: none;
+            }
+        </style>
+
+        <p><b>有序列表（小写罗马字母列表项）</b></p>
+
+        <ol id="ol1">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+
+        <p><b>有序列表（空心圆列表项）</b></p>
+
+        <ul id="ul1">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <p><b>去除列表项符号</b></p>
+
+        <ul id="none">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+    </div>
+
+    <br>
+
+    <h2>16.2 列表项图片</h2>
+
+    <hr>
+
+    <p>使用 list-style-image 属性定义列表项图片，也就是使用图片来代替列表项符号。</p>
+
+    <p style="border:1px solid gray;padding:10px">语法：list-style-image:url(图片路径);</p>
+
+    <p>示例：</p>
+
+    <div style="border: 1px solid gray; padding:0 30px;">
+        <style>
+            #ul-img {
+                list-style-image: url(https://s2.loli.net/2022/06/07/dvs9C3twciZTWBH.png);
+            }
+        </style>
+        <ul id="ul-img">
+            <li>舔狗大师</li>
+            <li>闲鱼首席慈善家</li>
+            <li>年度“股神”</li>
+        </ul>
+    </div>
+
+    <h2>16.3 本章练习</h2>
+
+    <p>定义一个列表，每一个列表项都是一个超链接，并且要求去除列表项符号及超链接下划线，超链接文本颜色为分红色，并且点击列表项会以新窗口的形式打开。</p>
+
+    <div style="border: 1px solid gray; padding:10px 0;">
+        <style>
+            .a1 {
+                color: pink;
+                text-decoration-line: none;
+            }
+
+            #ul-pink-none {
+                list-style-type: none;
+            }
+        </style>
+        <ul id="ul-pink-none">
+            <li>
+                <a class="a1" target="_blank" href="https://www.baidu.com">Top1：百度</a>
+            </li>
+            <li>
+                <a class="a1" target="_blank" href="https://www.taobao.com">Top2：淘宝</a>
+            </li>
+            <li>
+                <a class="a1" target="_blank" href="https://www.sina.com.cn/">Top3：新浪</a>
+            </li>
+            <li>
+                <a class="a1" target="_blank" href="https://www.163.com">Top4：网易</a>
+            </li>
+            <li>
+                <a class="a1" target="_blank" href="https://www.sohu.com">Top5：搜狐</a>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+</body>
+
+</html>
