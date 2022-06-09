@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>18-图片样式</title>
+    <style>
+        .border {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>18-图片样式</h1>
+
+    <p>相关笔记：<a href="/07-图片.html">07-图片</a></p>
+
+    <hr>
+    <br>
+
+    <h2>18.1 图片大小</h2>
+
+    <hr>
+
+    <p>使用 width 和 height 定于图片的宽高。</p>
+
+    <div class="border">
+        <p>语法：</p>
+        <ul>
+            <li>width: 像素值;</li>
+            <li>height: 像素值;</li>
+        </ul>
+    </div>
+
+    <p>示例：</p>
+
+    <div class="border">
+        <style>
+            #img-size {
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+        <img id="img-size" src="https://www.github.com/liang-n.png" alt="我的头像">
+    </div>
+
+    <h2>18.2 图片边框</h2>
+
+    <p>图片边框设置语法与其他元素设置边框语法一致，使用 border 属性。</p>
+
+    <p class="border">语法：border: 1px solid red;</p>
+
+    <p>示例：</p>
+
+    <div class="border">
+        <style>
+            #img-border {
+                border: 1px solid red;
+            }
+        </style>
+        <img id="img-border" src="https://www.github.com/liang-n.png" alt="我的头像">
+    </div>
+
+    <br>
+
+    <h2>18.3 图片对齐</h2>
+
+    <hr>
+
+    <br>
+
+    <h3>18.3.1 水平对齐</h3>
+
+    <hr>
+
+    <p>在 img 元素的父级元素中使用 text-align 属性来定义内容图片的水平对齐方式。</p>
+
+    <p class="border">语法：text-align: 取值;</p>
+
+    <ul>
+        <li>left - 左对齐（默认）</li>
+        <li>center - 居中对齐</li>
+        <li>right - 右对齐</li>
+    </ul>
+
+    <p>text-align 属性一般只用于两个地方：文本水平对齐和图片水平对齐。</p>
+
+    <p>示例：</p>
+
+    <div class="border">
+        <style>
+            #img-center {
+                text-align: center;
+            }
+
+            #img-right {
+                text-align: right;
+            }
+        </style>
+        <img src="https://www.github.com/liang-n.png" alt="我的头像"><br>
+        <div id="img-center">
+            <img src="https://www.github.com/liang-n.png" alt="我的头像"><br>
+        </div>
+        <div id="img-right">
+            <img src="https://www.github.com/liang-n.png" alt="我的头像">
+        </div>
+    </div>
+
+    <br>
+
+    <h3>18.3.2 垂直对齐</h3>
+
+    <hr>
+
+    <p>在 img 元素上使用 vertical-align 属性来定义图片周围的行内元素或文本相对与该元素垂直对齐。</p>
+
+    <p class="border">语法：vertical-align: 取值;</p>
+
+    <ul>
+        <li>top - 顶部对齐</li>
+        <li>middle - 中部对齐</li>
+        <li>baseline - 基线对齐</li>
+        <li>bottom - 底部对齐</li>
+    </ul>
+
+    <p>vertical 是「垂直」的意思，align 是「排列」，学习 CSS 属性与学习 HTML 标签一样，根据英文意思去理解和记忆事半功倍。</p>
+
+    <p>示例：</p>
+
+    <div class="border">
+        <style>
+            #img-top {
+                vertical-align: top;
+            }
+
+            #img-middle {
+                vertical-align: middle;
+            }
+
+            #img-baseline {
+                vertical-align: baseline;
+            }
+
+            #img-bottom {
+                vertical-align: bottom;
+            }
+        </style>
+        <p>
+            这个是我的 Github 头像：<img id="img-top" src="https://www.github.com/liang-n.png" alt="我的头像">，是一只黑色的猫！
+        </p>
+        <hr>
+        <p>
+            这个是我的 Github 头像：<img id="img-middle" src="https://www.github.com/liang-n.png" alt="我的头像">，是一只黑色的猫！
+        </p>
+        <hr>
+        <p>
+            这个是我的 Github 头像：<img id="img-baseline" src="https://www.github.com/liang-n.png" alt="我的头像">，是一只黑色的猫！
+        </p>
+        <hr>
+        <p>
+            这个是我的 Github 头像：<img id="img-bottom" src="https://www.github.com/liang-n.png" alt="我的头像">，是一只黑色的猫！
+        </p>
+    </div>
+
+    <p>可以观察到 baseline 和 bottom 的是不一样的：baseline 会将图片与文字内容的底部对齐，bottom 则将图片与文字行高对齐。</p>
+
+    <br>
+
+    <h2>18.4 文字环绕 float</h2>
+
+    <hr>
+
+    <p>网页布局中，经常进行图文混排，使用 float 属性实现文字环绕图片的效果。</p>
+
+    <p class="border">语法：float: 取值;</p>
+
+    <ul>
+        <li>left - 元素向左浮动</li>
+        <li>right - 元素向右浮动</li>
+    </ul>
+
+    <p>示例：</p>
+
+    <div class="border">
+        <style>
+            #img-float-left {
+                float: left;
+                width: 80px;
+                height: 80px;
+            }
+
+            #img-float-right {
+                float: right;
+                width: 80px;
+                height: 80px;
+            }
+
+            #p-line {
+                line-height: 26px;
+            }
+        </style>
+        <img id="img-float-left" src="https://www.github.com/liang-n.png" alt="我的头像">
+        <P id="p-line">
+            “人生天地之间，若白驹之过隙，忽然而已。注然勃然，莫不出焉；油然寥然，莫不入焉。已化而生，又化而死。生物哀之，人类悲之。解其天韬，堕其天帙。纷乎宛乎，魂魄将往，乃身从之。乃大归乎！不形之形，形之不形，是人之所同知也，非将至之所务也，此众人之所同论也。彼至则不论，论则不至；明见无值，辩不若默；道不可闻，闻不若塞：此之谓大得。”
+        </P>
+        <hr>
+        <img id="img-float-right" src="https://www.github.com/liang-n.png" alt="我的头像">
+        <P id="p-line">
+            “人生天地之间，若白驹之过隙，忽然而已。注然勃然，莫不出焉；油然寥然，莫不入焉。已化而生，又化而死。生物哀之，人类悲之。解其天韬，堕其天帙。纷乎宛乎，魂魄将往，乃身从之。乃大归乎！不形之形，形之不形，是人之所同知也，非将至之所务也，此众人之所同论也。彼至则不论，论则不至；明见无值，辩不若默；道不可闻，闻不若塞：此之谓大得。”
+        </P>
+    </div>
+
+    <br>
+
+</body>
+
+</html>
