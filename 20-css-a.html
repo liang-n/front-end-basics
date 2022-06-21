@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20-超链接样式</title>
+    <style>
+      .border {
+        border: 1px solid gray;
+        padding: 10px;
+      }
+
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>20-超链接样式</h1>
+
+    <hr />
+    <br />
+
+    <h2>20.1 超链接伪类</h2>
+
+    <hr />
+
+    <p>
+      在浏览器中，超链接的外观在默认情况、鼠标点击时／点击后是显示不同的样式的。
+    </p>
+
+    <img src="assets/IMG_F0F4DCE75CE2-1.jpeg" alt="超链接外观效果" />
+
+    <p>鼠标点击时是指鼠标点击链接的一瞬间显示的颜色。</p>
+
+    <br />
+
+    <h3>20.1.1 超链接伪类简介</h3>
+
+    <hr />
+
+    <p>使用「超链接伪类」来定义超链接在鼠标点击的不同时期的样式。</p>
+
+    <div class="border">
+      语法：
+      <ol>
+        <li>a:link - 定义 a 元素未访问时的样式</li>
+        <li>a:visited - 定义 a 元素访问后的样式</li>
+        <li>a:hover - 定义鼠标经过 a 元素时的样式</li>
+        <li>a:active - 定义鼠标点击激活元素 a 时的样式</li>
+      </ol>
+      定义时必须按照「 link → visited → hover → active
+      」的顺序进行定义，否浏览器可能无法识别。
+    </div>
+
+    <p>示例：</p>
+
+    <div class="border">
+      <style>
+        a:link {
+          color: rgb(0, 190, 29);
+        }
+
+        a:visited {
+          color: brown;
+        }
+
+        a:hover {
+          color: gray;
+        }
+
+        a:active {
+          color: aqua;
+        }
+      </style>
+      我的博客：<a href="http://in-x.cc/">in-x.cc</a>
+    </div>
+
+    <br />
+
+    <h2>20.2 深入了解 :hover 伪类</h2>
+
+    <hr />
+
+    <p>伪类 :hover 可以定义任何一个元素在鼠标经过时的样式。</p>
+
+    <p class="border">语法：元素:hover { …… }</p>
+
+    <p>示例：</p>
+
+    <div class="border">
+      <style>
+        .div-hover1 {
+          width: 200px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          background-color: chocolate;
+          color: #fff;
+        }
+
+        .div-hover1:hover {
+          background-color: coral;
+        }
+      </style>
+      <div class="div-hover1">鼠标移动到这里查看效果</div>
+    </div>
+
+    <br />
+
+    <h2>20.3 鼠标样式</h2>
+
+    <hr />
+
+    <p>定义鼠标样式有两种方法：</p>
+
+    <ul>
+      <li>浏览器鼠标样式</li>
+      <li>自定义鼠标样式</li>
+    </ul>
+
+    <br />
+
+    <h3>20.3.1 浏览器鼠标样式</h3>
+
+    <hr />
+
+    <p>使用 cursor 定义浏览器鼠标样式。</p>
+
+    <p class="border">语法：cursor: 取值;</p>
+
+    <img
+      src="assets/cursor-value.png"
+      alt="浏览器预设鼠标样式"
+      style="width: 600px"
+    />
+
+    <p>示例：</p>
+
+    <div class="border">
+      <style>
+        .div-cursor-size {
+          width: 200px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          background-color: chocolate;
+          color: #fff;
+        }
+
+        .div-cursor-size:hover {
+          background-color: coral;
+        }
+
+        .div-cursor1 {
+          cursor: default;
+        }
+
+        .div-cursor2 {
+          cursor: pointer;
+        }
+
+        .div-cursor3 {
+          cursor: text;
+        }
+      </style>
+      <div class="div-cursor1 div-cursor-size">默认鼠标样式</div>
+      <br />
+      <div class="div-cursor2 div-cursor-size">指针鼠标样式</div>
+      <br />
+      <div class="div-cursor3 div-cursor-size">文本鼠标样式</div>
+    </div>
+
+    <br />
+
+    <h3>20.3.2 自定义鼠标样式</h3>
+
+    <hr />
+
+    <p>与定义浏览器鼠标样式基本一直，使用 url() 设置自定义鼠标的图片地址。</p>
+
+    <p class="border">语法：cursor: url(鼠标图片地址), 取值;</p>
+
+    <p>示例：</p>
+
+    <div class="border">
+      <style>
+        .div-cursor4 {
+          cursor: url(https://s2.loli.net/2022/06/11/oYKaisNDZQx9uGv.png),
+            default;
+        }
+      </style>
+      <div class="div-cursor-size div-cursor1">浏览器鼠标样式</div>
+      <br />
+      <div class="div-cursor-size div-cursor4">自定义鼠标样式</div>
+    </div>
+
+    <br />
+  </body>
+</html>
